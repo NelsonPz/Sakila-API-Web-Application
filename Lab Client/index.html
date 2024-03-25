@@ -19,17 +19,17 @@
 
         <h3>{{ resourceType }}</h3>
         <div v-if="enableButtons">
-            <div v-if="resourceType === 'actors'">
+            <div v-if="resourceType === 'actors'" >
                 <button @click="goToFirstPage('actors')">First</button>
                 <button @click="goToPreviousPage('actors')">Previous</button>
-                <div>{{ page + 1}}/{{ totalPages }}</div>
+                {{ page + 1}}/{{ totalPages }}
                 <button @click="goToNextPage('actors')">Next</button>
                 <button @click="goToLastPage('actors')">Last</button>
             </div>
             <div v-else="">
                 <button @click="goToFirstPage('films')">First</button>
                 <button @click="goToPreviousPage('films')">Previous</button>
-                <div>{{ page + 1}}/{{ totalPages }}</div>
+                {{ page + 1}}/{{ totalPages }}
                 <button @click="goToNextPage('films')">Next</button>
                 <button @click="goToLastPage('films')">Last</button>
             </div>
