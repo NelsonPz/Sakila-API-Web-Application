@@ -13,19 +13,25 @@
         <!-- Start Vue -->
         <h1>{{ title }}</h1>
         
-        <button @click="fetchResource('actors',0,0)">Actors</button>
-        <button @click="fetchResource('films',0,0)">Films</button>
+        <button @click="fetchResource('actors',1)">Actors</button>
+        <button @click="fetchResource('films',1)">Films</button>
 
 
         <h3>{{ resourceType }}</h3>
         <div v-if="enableButtons">
             <div v-if="resourceType === 'actors'">
-                <button @click="fetchResource('actors',-1,0)">Previous</button>
-                <button @click="fetchResource('actors',1,0)">Next</button>
+                <button @click="goToFirstPage('actors')">First</button>
+                <button @click="goToPreviousPage('actors')">Previous</button>
+                <div>{{ page + 1}}/{{ totalPages }}</div>
+                <button @click="goToNextPage('actors')">Next</button>
+                <button @click="goToLastPage('actors')">Last</button>
             </div>
             <div v-else="">
-                <button @click="fetchResource('films',-1,0)">Previous</button>
-                <button @click="fetchResource('films',1,0)">Next</button>
+                <button @click="goToFirstPage('films')">First</button>
+                <button @click="goToPreviousPage('films')">Previous</button>
+                <div>{{ page + 1}}/{{ totalPages }}</div>
+                <button @click="goToNextPage('films')">Next</button>
+                <button @click="goToLastPage('films')">Last</button>
             </div>
         </div> 
 
