@@ -36,9 +36,3 @@ To run the Sakila API Web Application locally, follow these steps:
 - Java Spring Boot
 - Vue.js
 - HTML/CSS
-
-## Contributors
-- [Your Name](link-to-your-profile)
-
-## License
-This project is licensed under the [MIT License](LICENSE).
