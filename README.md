@@ -11,7 +11,7 @@ The Sakila API Web Application is a modern web application built for managing an
 
 ## Project Structure
 - **Server-side (Java Spring Boot)**:
-  - Entity Classes: `Actor` and `Film`.
+  - Entity Classes: `Actor` and `Film`, connected to MySQL database.
   - Repository Interfaces: `ActorRepo` and `FilmRepo`.
   - Main Controller: Defines RESTful API endpoints (`/api/actors`, `/api/films`, `/api/getAll`) for fetching data.
 - **Client-side (Vue.js)**:
@@ -21,18 +21,23 @@ The Sakila API Web Application is a modern web application built for managing an
 
 ## Getting Started
 To run the Sakila API Web Application locally, follow these steps:
-
 1. Clone the repository: `git clone <repository-url>`
 2. Navigate to the project directory: `cd sakila-api-web-app`
 3. Install dependencies:
    - Backend (Java Spring Boot): Dependencies are managed using Maven. Run `mvn clean install` to install dependencies.
    - Frontend (Vue.js): Dependencies are managed using npm. Run `npm install` to install dependencies.
-4. Run the application:
+4. Set up MySQL database:
+   - Use a MySQL database sample named `sakila`.
+   - Configure the database connection in the `application.properties` file located in the `src/main/resources` directory.
+5. Run the application:
    - Backend: Start the Spring Boot application.
    - Frontend: Serve the Vue.js application using a development server.
-5. Access the application in your web browser at `http://localhost:8080`.
+6. Access the application in your web browser at `http://localhost:8080`.
 
 ## Technologies Used
 - Java Spring Boot
 - Vue.js
 - HTML/CSS
+- MySQL
+
+
