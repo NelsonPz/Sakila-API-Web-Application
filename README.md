@@ -40,4 +40,4 @@ To run the Sakila API Web Application locally, follow these steps:
 - HTML/CSS
 - MySQL
 
-
+**Author**: Nelson Perez
